@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "backend/manage.py",
+        "use": "@vercel/python",
+        "config": { "maxDuration": 10 }
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "backend/$1" }
+    ]
+  }
+  
